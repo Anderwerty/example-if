@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CaeserCipher {
-    private final Alphabet alphabet;
+    private final Alphabet alphabet;// List<Character>, char[],....
 
     public CaeserCipher(Alphabet alphabet) {
         this.alphabet = alphabet;
@@ -42,6 +42,12 @@ public class CaeserCipher {
         Alphabet alphabet = new Alphabet(symbols);
 
         CaeserCipher caeserCipher = new CaeserCipher(alphabet);
+
+
+        List<Character> symbols2 = Arrays.asList('F', '0', '!', '1', '2');
+        Alphabet alphabet2 = new Alphabet(symbols);
+        CaeserCipher caeserCipher2 = new CaeserCipher(alphabet2);
+
 
         String text = "ab!2";
         int key = 1;

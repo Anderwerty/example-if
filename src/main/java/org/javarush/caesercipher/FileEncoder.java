@@ -55,8 +55,12 @@ public class FileEncoder {
         Alphabet alphabet = new Alphabet(symbols);
 
         CaeserCipher caeserCipher = new CaeserCipher(alphabet);
-        FileEncoder fileEncoder = new FileEncoder(caeserCipher, new FileService(), 128);
+        FileService fileService = new FileService();
+        FileEncoder fileEncoder = new FileEncoder(caeserCipher, fileService, 128);
         fileEncoder.encode("c:/...", 0);
+
+        FileEncoder fileEncoder2 = new FileEncoder(caeserCipher, fileService, 1024);
+
 
 
         // key 0 --->

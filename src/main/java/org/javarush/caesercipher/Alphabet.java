@@ -11,12 +11,12 @@ public class Alphabet {
         this.symbols = Collections.unmodifiableList(symbols);
     }
 
-    public Character method(Character original, int shift) {
+    public Character method(Character original, int key) { // give this method more descriptive name
         if (!symbols.contains(original)) {
             return original;
         }
 
-        return null; // TODO: implement here
+        return null; // TODO: Please write implementation here. For implementation use 'key' parameter.
     }
 
 
